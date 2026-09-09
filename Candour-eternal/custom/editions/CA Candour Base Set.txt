@@ -3,6 +3,8 @@ Code=CA_CA0
 Name=Candour Base Set
 Date=2023-01-01
 Type=Custom
+# rarity is all over the place, U and M numbers are equal, R is around double, so ignore rarity outright
+Booster=4 Uncommon, 7 Rare, 4 Mythic
 
 # ignore printed set card numbers and just reorder everything to alphanumerical for starting point
 # every new card added in the updates will just get appended to not break Adventure saves

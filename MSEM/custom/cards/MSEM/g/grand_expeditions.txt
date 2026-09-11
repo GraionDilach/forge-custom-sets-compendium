@@ -3,7 +3,7 @@ ManaCost:W
 Types:Enchantment
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | FirstTime$ True | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever a creature you control enters for the first time each turn, create a 1/1 Scout creature token that's all colors.
-SVar:TrigToken:DB$ Token | TokenScript$ all_1_1_scout | TokenOwner$ You
+SVar:TrigToken:DB$ Token | TokenScript$ all_1_1_scout
 
 Oracle:Whenever a creature you control enters for the first time each turn, create a 1/1 Scout creature token that's all colors.
 

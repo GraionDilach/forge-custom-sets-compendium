@@ -6,8 +6,8 @@ T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigMill | TriggerZo
 SVar:TrigMill:DB$ Mill
 
 T:Mode$ ChangesZone | Origin$ Library | Destination$ Graveyard | ValidCard$ Creature.YouOwn | OptionalDecider$ You | Execute$ TrigToken | TriggerZones$ Battlefield | TriggerDescription$ Whenever a creature card is put into your graveyard from your library, you may exile it. If you do, create a 2/2 black Zombie creature token.
-SVar:TrigToken:AB$ Token | Cost$ ExileAnyGrave<1/Card.TriggeredCard> | TokenScript$ b_2_2_zombie | TokenOwner$ You
+SVar:TrigToken:AB$ Token | Cost$ ExileAnyGrave<1/Card.TriggeredCard> | TokenScript$ b_2_2_zombie
 
 Oracle:At the beginning of your upkeep, mill a card.\nWhenever a creature card is put into your graveyard from your library, you may exile it. If you do, create a 2/2 black Zombie creature token.
 
-DeckHas:Ability$Mill|Token
+DeckHas:Ability$Mill|Token & Type$Zombie

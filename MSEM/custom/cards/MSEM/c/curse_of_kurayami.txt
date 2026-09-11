@@ -28,7 +28,7 @@ SVar:InscribeTrigger:Mode$ Attacks | ValidCard$ Card.IsRemembered | Execute$ Pla
 SVar:PlayInscribed:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | Controller$ TriggeredAttackerController | ValidSA$ Spell
 
 SVar:InscribedCreatureDies:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.IsRemembered | Execute$ CreateSpirit | TriggerDescription$ When the inscribed creature dies, create a 2/2 colorless Spirit creature token.
-SVar:CreateSpirit:DB$ Token | TokenScript$ c_2_2_spirit | TokenOwner$ You
+SVar:CreateSpirit:DB$ Token | TokenScript$ c_2_2_spirit
 
 SVar:InscriptionRemovedFromExile:Mode$ ChangesZone | Origin$ Exile | ValidCard$ Card.IsImprinted | Execute$ ExileEffect | Static$ True
 SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile

@@ -64,7 +64,7 @@ Storytime (101)                       -  98% (99/101)
   Missing cards:
     * Arpechian Champion
     * Jara Champion
-High Noon (HI12)                      -  43% (121/279)
+High Noon (HI12)                      -  48% (136/279)
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  99% (208/209)
   Missing cards:
@@ -119,6 +119,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Showcase](#showcase)
 * [Storied](#storied)
 * [Torment](#torment)
+* [Vision](#vision)
 * [Wanderlust](#wanderlust)
 
 ### Aetherize
@@ -587,6 +588,28 @@ SVar:DBLoseLifeFallback:DB$ LoseLife | LifeAmount$ 3
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
+
+### Vision
+
+Vision is defined as, and is often accompagnied by `Whenever this creature envisions [...]`:
+
+```text
+Vision (Whenever this or another creature you control enters, reveal the top card of your library. Then you may put that card into your graveyard.)
+```
+
+Implementation
+
+```text
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigVision | TriggerDescription$ Vision (Whenever this or another creature you control enters, reveal the top card of your library. Then you may put that card into your graveyard.)
+SVar:TrigVision:DB$ Dig | DigNum$ 1 | Reveal$ True | RememberRevealed$ True | ChangeNum$ All | DestinationZone$ Library | LibraryPosition$ 0 | SubAbility$ DBMayGrave
+SVar:DBMayGrave:DB$ ChangeZone | Defined$ Remembered | Origin$ Library | Destination$ Graveyard | Optional$ True | SubAbility$ DBEnvision
+SVar:DBEnvision:DB$ ImmediateTrigger | Static$ True | ConditionDefined$ Remembered | ConditionPresent$ Creature | ConditionCompare$ GE1 | Execute$ DBEnvisionSignal | SubAbility$ DBCleanup
+SVar:DBEnvisionSignal:DB$ Cleanup | Named$ Envision
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+T:Mode$ AbilityResolves | ValidSource$ Card.Self | ValidSpellAbility$ Ability.NamedAbilityEnvision | TriggerZones$ Battlefield | Execute$ TrigReturn | TriggerDescription$ Whenever this creature envisions a creature card, return target noncreature card from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Card.nonCreature.YouOwn | TgtPrompt$ Select target noncreature card
+```
 
 ### Wanderlust
 

@@ -7,7 +7,7 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 
 [cards]
 1 C Arrest @Suzanne Helmigh
-# 2 U Atop Their High Horses @Jon Hodgson
+2 U Atop Their High Horses @Jon Hodgson
 3 R Bearidge Charmer @Andrew Ryan
 4 R Bearidge Jailer @Felipe Gaona
 5 R Bearidge Marshall @John Silva
@@ -197,7 +197,7 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 189 C Lingering Guide @kanovsky
 190 U Loreweaver @Marya Yetseva
 191 R Mentor of the Mighty @Daniel Eskridge
-192 R Mistbreaker @patrick Reilly
+192 R Mistbreaker @Patrick Reilly
 193 R Mysteries of the Ulek @Moggith
 194 C Natural Growth @chvacher
 195 C Nightshade Cultivator @Wildweasel339
@@ -289,8 +289,11 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 
 [tokens]
 1 c_1_1_spirit @Elizabeth Sherry
-2 arrest @Pinokko
 3 b_1_1_bird_flying @Alex Stone
-# 4 Beast @Jasper Sandner
+4 c_x_x_beast @Jasper Sandner
 5 g_1_1_elf_scout @Emmanuel Madail Monzon
 6 c_a_gold_sac @BobShmob
+
+[WalkerTypes]
+Azun
+Haide

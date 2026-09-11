@@ -3,8 +3,8 @@ ManaCost:3
 Types:Artifact Creature Scarecrow
 PT:2/3
 
-S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Vigilance | IsPresent$ Scarecrow.Other+YouCtrl | Description$ CARDNAME has vigilance as long as you control another Scarecrow.
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Vigilance | IsPresent$ Scarecrow.Other+YouCtrl | Description$ This creature has vigilance as long as you control another Scarecrow.
 
-DeckHints:Type$Scarecrow
+Oracle:This creature has vigilance as long as you control another Scarecrow.
 
-Oracle:Tumblewalker has vigilance as long as you control another Scarecrow.
+SVar:BuffedBy:Scarecrow

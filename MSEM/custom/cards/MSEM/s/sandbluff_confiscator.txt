@@ -3,7 +3,7 @@ ManaCost:2 W
 Types:Creature Human Soldier
 PT:2/2
 
-T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigTapOrUntap | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters, you may tap or untap target artifact or creature.
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigTapOrUntap | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may tap or untap target artifact or creature.
 SVar:TrigTapOrUntap:DB$ TapOrUntap | ValidTgts$ Artifact,Creature
 
-Oracle:When Sandbluff Confiscator enters, you may tap or untap target artifact or creature.
+Oracle:When this creature enters, you may tap or untap target artifact or creature.

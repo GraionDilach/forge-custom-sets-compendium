@@ -1,0 +1,18 @@
+Name:Vessel of Lost Souls
+ManaCost:G U
+Types:Creature Plant Spirit
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigVision | TriggerDescription$ Vision (Whenever this or another creature you control enters, reveal the top card of your library. Then you may put that card into your graveyard.)
+SVar:TrigVision:DB$ Dig | DigNum$ 1 | Reveal$ True | RememberRevealed$ True | DestinationZone$ Library | LibraryPosition$ 0 | SubAbility$ DBMayGrave
+SVar:DBMayGrave:DB$ ChangeZone | Defined$ Remembered | Origin$ Library | Destination$ Graveyard | Optional$ True | SubAbility$ DBEnvision
+SVar:DBEnvision:DB$ ImmediateTrigger | ConditionDefined$ Remembered | ConditionPresent$ Creature | ConditionCompare$ GE1 | RememberObjects$ Remembered | Execute$ DBEnvisionSignal | SubAbility$ DBCleanup
+SVar:DBEnvisionSignal:DB$ Cleanup | Named$ Envision
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+T:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.Self | ValidSpellAbility$ Ability.NamedAbilityEnvision | Execute$ TrigClone | TriggerDescription$ Whenever this creature envisions a creature card, you may have it become a copy of that card until end of turn.
+SVar:TrigClone:DB$ Clone | Defined$ Self | CloneTarget$ TriggeredSpellAbility>DelayTriggerRemembered | Duration$ UntilEndOfTurn | Optional$ True
+
+Oracle:Vision (Whenever this or another creature you control enters, reveal the top card of your library. Then you may put that card into your graveyard.)\nWhenever this creature envisions a creature card, you may have it become a copy of that card until end of turn.
+
+DeckHas:Ability$Graveyard

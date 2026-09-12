@@ -8,6 +8,5 @@ SVar:TrigBalanceArtifact:DB$ Balance | Valid$ Artifact | AILogic$ BalancePermane
 SVar:BalanceHands:DB$ Balance | Zone$ Hand
 
 AI:RemoveDeck:All
-AI:RemoveDeck:Random
 
 Oracle:When Calamity Rose enters, each player chooses a number of artifacts they control equal to the number of artifacts controlled by the player who controls the fewest, then sacrifices the rest. Each player discards cards the same way.

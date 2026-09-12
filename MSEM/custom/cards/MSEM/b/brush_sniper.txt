@@ -4,6 +4,7 @@ Types:Creature Elf Warrior Archer
 PT:4/2
 
 K:Reach
+
 K:Hexproof
 
 Oracle:Reach\nHexproof

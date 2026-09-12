@@ -204,9 +204,9 @@ Bounty is defined as
 Implementation:
 
 ```text
-SVar:TrigBounty:DB$ PutCounter | ValidTgts$ Creature | CounterType$ BOUNTY | CounterNum$ 1 | IsCurse$ True | SpellDescription$ Put a bounty counter on target creature.
+SVar:TrigBounty:DB$ PutCounter | CounterType$ BOUNTY | IsCurse$ True | ValidTgts$ Creature | SpellDescription$ Put a bounty counter on target creature.
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever a creature with a bounty counter on it dies, each of its controller's opponents draws a card.
-SVar:TrigDraw:DB$ Draw | Defined$ Player.OpponentOf TriggeredCardController | NumCards$ 1
+SVar:TrigDraw:DB$ Draw | Defined$ Player.OpponentOf TriggeredCardController
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -368,7 +368,7 @@ Improve {1} ({1}: Put a +1/+1 counter on this creature. This costs {1} more to a
 Implementation:
 
 ```text
-A:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | CounterNum$ 1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
+A:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
 SVar:X:Count$CardCounters.P1P1
 ```
 
@@ -402,7 +402,7 @@ Inscribe {2}{W} ({2}{W}: Exile this card from your hand inscribed on a creature 
 Implementation:
 
 ```text
-A:AB$ Pump | Cost$ 2 W Reveal<1/CARDNAME> | ActivationZone$ Hand | ValidTgts$ Creature.YouCtrl | TgtZone$ Battlefield | TgtPrompt$ Select target creature you control | SorcerySpeed$ True | NumAtt$ 0 | NumDef$ 0 | Duration$ Permanent | StackDescription$ SpellDescription | SubAbility$ DBExileForInscribe | PrecostDesc$ Inscribe | SpellDescription$ ({2}{W}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
+A:AB$ Pump | Cost$ 2 W Reveal<1/CARDNAME> | ActivationZone$ Hand | ValidTgts$ Creature.YouCtrl | TgtZone$ Battlefield | TgtPrompt$ Select target creature you control | SorcerySpeed$ True | Duration$ Permanent | StackDescription$ SpellDescription | SubAbility$ DBExileForInscribe | PrecostDesc$ Inscribe | SpellDescription$ ({2}{W}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
 SVar:DBExileForInscribe:DB$ ChangeZone | Defined$ Self.YouOwn | Origin$ Hand | Destination$ Exile | RememberChanged$ True | ForgetOtherRemembered$ True | SubAbility$ DBCreateInscribe
 SVar:DBCreateInscribe:DB$ Effect | Name$ Inscription Effect | ConditionDefined$ Remembered | ConditionPresent$ Card.inZoneExile | ConditionCompare$ EQ1 | RememberObjects$ Targeted | StaticAbilities$ STInscribeDesc | Triggers$ InscribeTrigger,InscribedCreatureLeaves,InscriptionRemovedFromExile | ImprintCards$ Remembered | Duration$ Permanent | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
@@ -622,7 +622,7 @@ Wanderlust — {T}: Scry 1. Activate only if you control four or more differentl
 To check for Wanderlust:
 
 ```text
-A:AB$ Scry | Cost$ T | ScryNum$ 1 | CheckSVar$ WanderLands | SVarCompare$ GE4 | SpellDescription$ Wanderlust — Scry 1. Activate only if you control four or more differently named lands.
+A:AB$ Scry | Cost$ T | CheckSVar$ WanderLands | SVarCompare$ GE4 | SpellDescription$ Wanderlust — Scry 1. Activate only if you control four or more differently named lands.
 SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
 ```
 

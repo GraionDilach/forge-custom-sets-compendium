@@ -226,7 +226,7 @@ Booster=4 Uncommon, 7 Rare, 4 Mythic
 215 R Mangle @Brett Bullion
 216 U Marrow Harvester @Bastien Grivet
 217 R Memory Severance @Noah Thatcher
-218 U Memory Spike @Carment Sinek
+218 U Memory Spike @Carmen Sinek
 219 R Menagerie Caretaker @Sandara Tang
 220 R Menagerie Sculptor @James Brough
 221 R Merfolk Sojourner @Yans Velazquez

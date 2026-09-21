@@ -1,0 +1,9 @@
+Name:Ember Salvo
+ManaCost:R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Creature | NumDmg$ 1 | DamageMap$ True | SubAbility$ DBDealDamage | SpellDescription$ This spell deals 1 damage to target creature and 1 damage to that creature's controller.
+SVar:DBDealDamage:DB$ DealDamage | NumDmg$ 1 | Defined$ TargetedController | SubAbility$ DBDamageResolve
+SVar:DBDamageResolve:DB$ DamageResolve
+
+Oracle:This spell deals 1 damage to target creature and 1 damage to that creature's controller.

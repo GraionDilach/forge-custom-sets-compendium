@@ -1,0 +1,10 @@
+Name:Goblin Cutpurses
+ManaCost:1 R
+Types:Creature Goblin
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDiscard | TriggerDescription$ When this creature enters, target player discards a card, then draw a card.
+SVar:TrigDiscard:DB$ Discard | ValidTgts$ Player | TgtPrompt$ Select a player | Mode$ TgtChoose | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | Defined$ TargetedPlayer
+
+Oracle:When this creature enters, target player discards a card, then draw a card.

@@ -1,0 +1,8 @@
+Name:Healer's Knack
+ManaCost:1 W
+Types:Instant
+
+A:SP$ GainLife | LifeAmount$ 5 | SubAbility$ DBRegen | SpellDescription$ You gain 5 life, then you may regenerate target creature.
+SVar:DBRegen:DB$ Regenerate | Optional$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature
+
+Oracle:You gain 5 life, then you may regenerate target creature.

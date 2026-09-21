@@ -1,0 +1,7 @@
+Name:Vampiric Thirst
+ManaCost:B
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | KW$ Lifelink | SpellDescription$ Target creature gains lifelink until end of turn.
+
+Oracle:Target creature gains lifelink until end of turn.

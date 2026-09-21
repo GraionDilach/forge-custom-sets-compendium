@@ -1,0 +1,8 @@
+Name:Charbelcher
+ManaCost:1 R
+Types:Creature Lizard
+PT:1/2
+
+A:AB$ Pump | Cost$ R | NumAtt$ +1 | SpellDescription$ This creature gets +1/+0 until end of turn.
+
+Oracle:{R}: This creature gets +1/+0 until end of turn.

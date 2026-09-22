@@ -1,0 +1,13 @@
+Name:Verendas Spiritwalker
+ManaCost:2 G
+Types:Creature Elf
+PT:1/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may put a +1/+1 counter on target creature.
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature | CounterType$ P1P1 | CounterNum$ 1
+
+Oracle:When this creature enters, you may put a +1/+1 counter on target creature.
+
+SVar:PlayMain1:TRUE
+
+DeckHas:Ability$Counters

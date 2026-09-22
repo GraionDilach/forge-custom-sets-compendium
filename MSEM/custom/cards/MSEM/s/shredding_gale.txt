@@ -1,0 +1,5 @@
+Name:Shredding Gale
+ManaCost:2 G
+Types:Sorcery
+A:SP$ DamageAll | NumDmg$ 4 | ValidCards$ Creature.withFlying | ValidDescription$ each creature with flying. | SpellDescription$ This spell deals 4 damage to each creature with flying.
+Oracle:This spell deals 4 damage to each creature with flying.

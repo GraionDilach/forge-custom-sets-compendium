@@ -1,0 +1,7 @@
+Name:Wayfarer's Lantern
+ManaCost:2
+Types:Artifact
+
+A:AB$ Untap | Cost$ T | ValidTgts$ Land.Basic | TgtPrompt$ Select target basic land | SpellDescription$ Untap target basic land.
+
+Oracle:{T}: Untap target basic land.

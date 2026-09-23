@@ -1,0 +1,8 @@
+Name:Living Fissures
+ManaCost:4 R G
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Landfall — Whenever a land you control enters, create a 3/3 red and green Elemental creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ rg_3_3_elemental | TokenOwner$ You
+
+Oracle:Landfall — Whenever a land you control enters, create a 3/3 red and green Elemental creature token.

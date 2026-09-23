@@ -1,0 +1,10 @@
+Name:Dominion Crown
+ManaCost:6
+Types:Artifact
+
+S:Mode$ Continuous | Affected$ You | AddKeyword$ Hexproof | Description$ You have hexproof. (You can't be the target of spells or abilities your opponents control.)
+
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigTapOrUntap | TriggerDescription$ Whenever you cast a noncreature spell, you may tap or untap target permanent.
+SVar:TrigTapOrUntap:DB$ TapOrUntap | ValidTgts$ Permanent
+
+Oracle:You have hexproof. (You can't be the target of spells or abilities your opponents control.)\nWhenever you cast a noncreature spell, you may tap or untap target permanent.

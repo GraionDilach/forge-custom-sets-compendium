@@ -1,0 +1,11 @@
+Name:Magus Aspirant
+ManaCost:2 U R
+Types:Creature Human Wizard
+PT:2/2
+
+K:Prowess
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may search your library for an instant or sorcery card, reveal it, put it into your hand, then shuffle.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Instant,Sorcery | ChangeNum$ 1
+
+Oracle:Prowess\nWhen this creature enters, you may search your library for an instant or sorcery card, reveal it, put it into your hand, then shuffle.

@@ -1,0 +1,13 @@
+Name:Scourge of the Skies
+ManaCost:4 R R R
+Types:Creature Dragon
+PT:5/4
+
+K:Flying
+
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDealDamage | OptionalDecider$ You | TriggerDescription$ Whenever this creature attacks, you may have it deal 5 damage to target creature.
+SVar:TrigDealDamage:DB$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 5
+
+Oracle:Flying, haste\nWhenever this creature attacks, you may have it deal 5 damage to target creature.

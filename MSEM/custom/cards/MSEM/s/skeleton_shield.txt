@@ -1,0 +1,9 @@
+Name:Skeleton Shield
+ManaCost:1
+Types:Artifact Equipment
+
+K:Equip:3
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddToughness$ 3 | AddKeyword$ Menace | Description$ Equipped creature gets +0/+3 and has menace.
+
+Oracle:Equipped creature gets +0/+3 and has menace.\nEquip {3}

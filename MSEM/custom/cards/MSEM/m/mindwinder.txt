@@ -1,0 +1,11 @@
+Name:Mindwinder
+ManaCost:2 G
+Types:Creature Snake
+PT:1/2
+
+K:Deathtouch
+
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever an opponent casts a noncreature spell, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Deathtouch\nWhenever an opponent casts a noncreature spell, draw a card.

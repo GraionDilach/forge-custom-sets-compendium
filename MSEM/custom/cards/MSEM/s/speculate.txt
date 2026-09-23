@@ -1,0 +1,9 @@
+Name:Speculate
+ManaCost:1 R
+Types:Sorcery
+
+A:SP$ FlipCoin | WinSubAbility$ DBDraw | LoseSubAbility$ DBDiscard | SpellDescription$ Flip a coin. If you win the flip, draw two cards. Otherwise, discard two cards.
+SVar:DBDraw:DB$ Draw | NumCards$ 2
+SVar:DBDiscard:DB$ Discard | Defined$ You | NumCards$ 2 | Mode$ TgtChoose
+
+Oracle:Flip a coin. If you win the flip, draw two cards. Otherwise, discard two cards.

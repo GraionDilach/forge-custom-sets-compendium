@@ -1,0 +1,11 @@
+Name:Surging Charge
+ManaCost:1 R
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddKeyword$ Haste & First Strike | Description$ Enchanted creature has haste and first strike.
+
+Oracle:Enchant creature\nEnchanted creature has haste and first strike.
+
+SVar:AttachAILogic:Pump

@@ -1,0 +1,10 @@
+Name:Unstable Borer
+ManaCost:5
+Types:Artifact Creature Juggernaut
+PT:4/3
+
+K:Trample
+
+S:Mode$ MustAttack | ValidCreature$ Card.Self | Description$ This creature attacks each combat if able.
+
+Oracle:Trample\nThis creature attacks each combat if able.

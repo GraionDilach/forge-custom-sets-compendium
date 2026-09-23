@@ -1,0 +1,13 @@
+Name:Mist Lurker
+ManaCost:4 G U
+Types:Creature Beast
+PT:4/4
+
+K:Flash
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigTapAll | TriggerDescription$ When this creature enters, tap all creatures you don't control.
+SVar:TrigTapAll:DB$ TapAll | ValidCards$ Creature.YouDontCtrl
+
+Oracle:Flash\nWhen this creature enters, tap all creatures you don't control.
+
+SVar:PlayMain1:TRUE

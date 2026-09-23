@@ -1,0 +1,11 @@
+Name:Automated Blademaster
+ManaCost:4
+Types:Artifact Creature Construct
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a colorless Equipment token named Sword with "Equipped creature gets +1/+1" and equip {1} and attach it to this creature.
+SVar:TrigToken:DB$ Token | TokenScript$ sword_msem | RememberTokens$ True | SubAbility$ DBAttach
+SVar:DBAttach:DB$ Attach | Object$ Remembered | Defined$ Self | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature enters, create a colorless Equipment token named Sword with "Equipped creature gets +1/+1" and equip {1} and attach it to this creature.

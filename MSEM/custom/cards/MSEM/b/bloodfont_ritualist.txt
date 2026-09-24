@@ -1,0 +1,12 @@
+Name:Bloodfont Ritualist
+ManaCost:W B
+Types:Creature Vampire Cleric
+PT:2/2
+
+K:Lifelink
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | OptionalDecider$ You | TriggerZones$ Battlefield | Execute$ TrigToken | CheckSVar$ X | SVarCompare$ GE0 | TriggerDescription$ At the beginning of your end step, if you lost life this turn, you may pay {1}. If you do, create a 2/2 black Zombie creature token.
+SVar:TrigToken:DB$ Token | Cost$ 1 | TokenScript$ b_2_2_zombie
+SVar:X:PlayerCountPropertyYou$LifeLostThisTurn
+
+Oracle:Lifelink\nAt the beginning of your end step, if you lost life this turn, you may pay {1}. If you do, create a 2/2 black Zombie creature token.

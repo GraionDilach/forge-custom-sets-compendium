@@ -1,0 +1,15 @@
+Name:Spider Broodmother
+ManaCost:3 G G
+Types:Creature Spider
+PT:2/4
+
+K:Reach
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature dies, create two 1/2 green Spider creature tokens with reach.
+SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ g_1_2_spider_reach | TokenOwner$ You
+
+Oracle:Reach\nWhen this creature dies, create two 1/2 green Spider creature tokens with reach.
+
+SVar:SacMe:2
+
+DeckHas:Ability$Token

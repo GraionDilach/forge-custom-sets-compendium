@@ -1,0 +1,10 @@
+Name:Wild Ravine
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ Combo R G | SpellDescription$ Add {R} or {G}.
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control two or more red and/or green permanents.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Permanent.Red+YouCtrl,Permanent.Green+YouCtrl | ConditionCompare$ LT2
+
+Oracle:This land enters tapped unless you control two or more red and/or green permanents.\n{T}: Add {R} or {G}.

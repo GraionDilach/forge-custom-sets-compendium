@@ -1,0 +1,10 @@
+Name:Valley Falls
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ Combo W U | SpellDescription$ Add {W} or {U}.
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control two or more white and/or blue permanents.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Permanent.White+YouCtrl,Permanent.Blue+YouCtrl | ConditionCompare$ LT2
+
+Oracle:This land enters tapped unless you control two or more white and/or blue permanents.\n{T}: Add {W} or {U}.

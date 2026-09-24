@@ -1,0 +1,10 @@
+Name:Verdant Sanctum
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ Combo G W | SpellDescription$ Add {G} or {W}.
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control two or more green and/or white permanents.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Permanent.Green+YouCtrl,Permanent.White+YouCtrl | ConditionCompare$ LT2
+
+Oracle:This land enters tapped unless you control two or more green and/or white permanents.\n{T}: Add {G} or {W}.

@@ -1,0 +1,10 @@
+Name:Moonlit Shore
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ Combo U B | SpellDescription$ Add {U} or {B}.
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control two or more blue and/or black permanents.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Permanent.Blue+YouCtrl,Permanent.Black+YouCtrl | ConditionCompare$ LT2
+
+Oracle:This land enters tapped unless you control two or more blue and/or black permanents.\n{T}: Add {U} or {B}.

@@ -1,0 +1,10 @@
+Name:Bloodstone Halls
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ Combo B R | SpellDescription$ Add {B} or {R}.
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control two or more black and/or red permanents.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Permanent.Black+YouCtrl,Permanent.Red+YouCtrl | ConditionCompare$ LT2
+
+Oracle:This land enters tapped unless you control two or more black and/or red permanents.\n{T}: Add {B} or {R}.

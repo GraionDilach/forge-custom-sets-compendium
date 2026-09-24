@@ -1,0 +1,8 @@
+Name:Steeled Resolve
+ManaCost:2 W
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +1 | NumDef$ +5 | TgtPrompt$ Select target creature | SubAbility$ DBDraw | SpellDescription$ Target creature gets +1/+5 until end of turn. Draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Target creature gets +1/+5 until end of turn.\nDraw a card.

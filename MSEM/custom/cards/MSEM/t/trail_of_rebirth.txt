@@ -1,0 +1,7 @@
+Name:Trail of Rebirth
+ManaCost:1 G
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Library | ValidTgts$ Permanent.YouOwn | TgtPrompt$ Select target permanent card from your graveyard | SpellDescription$ Put target permanent card from your graveyard on top of your library.
+
+Oracle:Put target permanent card from your graveyard on top of your library.

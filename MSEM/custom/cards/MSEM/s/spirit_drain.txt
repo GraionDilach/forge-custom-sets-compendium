@@ -1,0 +1,10 @@
+Name:Spirit Drain
+ManaCost:2 W
+Types:Sorcery
+
+A:SP$ Destroy | ValidTgts$ Enchantment | SpellDescription$ Destroy target enchantment. | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | CounterType$ P1P1 | CounterNum$ 1 | SpellDescription$ Put a +1/+1 counter on target creature you control.
+
+Oracle:Destroy target enchantment.\nPut a +1/+1 counter on target creature you control.
+
+DeckHints:Ability$Counters

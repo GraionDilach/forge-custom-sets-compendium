@@ -1,0 +1,8 @@
+Name:Magister of Impotence
+ManaCost:1 W
+Types:Creature Spirit Advisor
+PT:1/3
+
+S:Mode$ RaiseCost | ValidCard$ Card | ValidSpell$ Activated.nonLand | Amount$ 2 | Description$ Activated abilities of nonland permanents cost {2} more to activate.
+
+Oracle:Activated abilities of nonland permanents cost {2} more to activate.

@@ -1,0 +1,14 @@
+Name:Lord of Swarms
+ManaCost:3 B B
+Types:Creature Insect
+PT:2/2
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature enters, target creature gets -2/-2 until end of turn.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature dies, target creature gets -2/-2 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ -2 | NumDef$ -2 | IsCurse$ True
+
+Oracle:Flying\nWhen this creature enters or dies, target creature gets -2/-2 until end of turn.
+
+SVar:PlayMain1:TRUE

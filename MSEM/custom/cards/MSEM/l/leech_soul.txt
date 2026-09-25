@@ -1,0 +1,9 @@
+Name:Leech Soul
+ManaCost:1 B
+Types:Instant
+
+A:SP$ Pump | Cost$ 1 B Sac<1/Creature> | ValidTgts$ Creature | NumAtt$ +4 | NumDef$ +4 | SpellDescription$ Target creature gets +4/+4 until end of turn.
+
+Oracle:As an additional cost to cast this spell, sacrifice a creature.\nTarget creature gets +4/+4 until end of turn.
+
+SVar:AIPreference:SacCost$Creature

@@ -1,0 +1,9 @@
+Name:Concenter
+ManaCost:X U
+Types:Sorcery
+
+A:SP$ ChangeZoneAll | Origin$ Hand | Destination$ Library | ChangeType$ Card.YouOwn | Shuffle$ True | SubAbility$ DBDraw | SpellDescription$ Shuffle your hand into your library, then draw X cards.
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ X
+SVar:X:Count$xPaid
+
+Oracle:Shuffle your hand into your library, then draw X cards.

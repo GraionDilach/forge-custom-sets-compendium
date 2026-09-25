@@ -1,0 +1,9 @@
+Name:Aeon's Hand Cutthroat
+ManaCost:2 U
+Types:Creature Human Rogue
+PT:3/2
+
+A:AB$ Effect | Cost$ 1 U | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable | SpellDescription$ This creature can't be blocked this turn.
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ EFFECTSOURCE can't be blocked this turn.
+
+Oracle:{1}{U}: This creature can't be blocked this turn.

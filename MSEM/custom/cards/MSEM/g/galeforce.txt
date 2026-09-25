@@ -1,0 +1,9 @@
+Name:Galeforce
+ManaCost:1 U
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Hand | SubAbility$ DBPump | SpellDescription$ Return target creature to its owner's hand. You may have another target creature gain flying until end of turn.
+
+SVar:DBPump:DB$ Pump | OptionalDecider$ You | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature | KW$ Flying
+
+Oracle:Return target creature to its owner's hand. You may have another target creature gain flying until end of turn.

@@ -1,0 +1,13 @@
+Name:Northwind Master
+ManaCost:U
+Types:Creature Djinn Monk
+PT:1/1
+
+K:Prowess
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigPump | TriggerDescription$ When this creature enters, you may have another target creature you control gain prowess until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.YouCtrl+Other | TgtPrompt$ Select another target creature you control | KW$ Prowess
+
+Oracle:Prowess\nWhen this creature enters, you may have another target creature you control gain prowess until end of turn.
+
+SVar:PlayMain1:TRUE

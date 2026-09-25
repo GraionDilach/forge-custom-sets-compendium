@@ -1,0 +1,15 @@
+Name:Erase from Existance
+ManaCost:4 B B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature | TgtPrompt$ Select target creature | RememberLKI$ True | ForgetOtherTargets$ True | SubAbility$ ExileBattlefield | SpellDescription$ Exile target creature and all other creatures with the same name as that creature. Search its controller's graveyard, hand, and library for all cards with the same name as that creature and exile them. Then that player shuffles.
+SVar:ExileBattlefield:DB$ ChangeZoneAll | Origin$ Battlefield | Destination$ Exile | ChangeType$ Remembered.sameName | SubAbility$ ExileYard | StackDescription$ None
+SVar:ExileYard:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | Defined$ RememberedController | ChangeType$ Remembered.sameName | SubAbility$ ExileHand | StackDescription$ None
+SVar:ExileHand:DB$ ChangeZone | Origin$ Hand | Destination$ Exile | DefinedPlayer$ RememberedController | ChangeType$ Remembered.sameName | ChangeNum$ NumInHand | Chooser$ You | SubAbility$ ExileLib | StackDescription$ None
+SVar:ExileLib:DB$ ChangeZone | Origin$ Library | Destination$ Exile | DefinedPlayer$ RememberedController | ChangeType$ Remembered.sameName | ChangeNum$ NumInLib | Chooser$ You | Shuffle$ True | SubAbility$ DBCleanup | StackDescription$ None
+SVar:NumInHand:PlayerCountRememberedController$CardsInHand
+SVar:NumInLib:PlayerCountRememberedController$CardsInLibrary
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True| SubAbility$ DBExileSelf
+SVar:DBExileSelf:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | SpellDescription$ Exile this spell.
+
+Oracle:Exile target creature and all other creatures with the same name as that creature. Search its controller's graveyard, hand, and library for all cards with the same name as that creature and exile them. Then that player shuffles. Exile this spell.

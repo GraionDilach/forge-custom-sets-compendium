@@ -1,0 +1,16 @@
+Name:Sanguine Mortifier
+ManaCost:2 B B
+Types:Creature Vampire Wizard
+PT:2/3
+
+K:Flying
+
+K:Lifelink
+
+T:Mode$ LifeGained | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigPump | TriggerDescription$ Whenever you gain life, you may have target creature get -X/-X until end of turn, where X is the amount of life you gained.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ -X | NumDef$ -X | IsCurse$ True
+SVar:X:TriggerCount$LifeAmount
+
+Oracle:Flying, lifelink\nWhenever you gain life, you may have target creature get -X/-X until end of turn, where X is the amount of life you gained.
+
+DeckHints:Ability$LifeGain

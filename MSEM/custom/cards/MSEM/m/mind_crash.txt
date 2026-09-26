@@ -1,0 +1,9 @@
+Name:Mind Crash
+ManaCost:4 B B
+Types:Sorcery
+
+A:SP$ RevealHand | Defined$ Targeted | ValidTgts$ Player | IsCurse$ True | SubAbility$ ExileHand | StackDescription$ SpellDescription | SpellDescription$ Target player reveals their hand.
+SVar:ExileHand:DB$ ChangeZone | Origin$ Hand | Destination$ Exile | DefinedPlayer$ Targeted | Chooser$ You | ChangeType$ Card | ChangeNum$ 3 | Mandatory$ True | SubAbility$ ExileHand | StackDescription$ {p:You} choose three cards from it and exile them. | SpellDescription$ You choose three cards from it and exile them.
+SVar:ExileLibrary:DB$ Dig | Defined$ Targeted | DigNum$ 3 | ChangeNum$ All | DestinationZone$ Exile | SpellDescription$ Targeted player exiles the top three cards from their library.
+
+Oracle:Target player reveals their hand. You choose three cards from it and exile them. Then that player exiles the top three cards from their library.

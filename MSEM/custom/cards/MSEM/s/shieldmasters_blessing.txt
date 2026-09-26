@@ -1,0 +1,11 @@
+Name:Shieldmaster's Blessing
+ManaCost:2 W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddToughness$ 2 | CanBlockAmount$ 1 | Description$ Enchanted creature gets +0/+2 and can block an additional creature each combat.
+
+Oracle:Enchant creature\nEnchanted creature gets +0/+2 and can block an additional creature each combat.
+
+SVar:AttachAILogic:Pump

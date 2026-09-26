@@ -1,0 +1,11 @@
+Name:Goldhill Guardian
+ManaCost:2 W W
+Types:Creature Human Soldier
+PT:3/4
+
+K:ETBReplacement:Other:ChooseCT
+SVar:ChooseCT:DB$ ChooseType | Defined$ You | Type$ Creature | AILogic$ MostProminentOppControls | SpellDescription$ As this creature enters, choose a creature type. | StackDescription$ SpellDescription
+
+K:Protection:ChosenType
+
+Oracle:As this creature enters, choose a creature type.\nThis creature has protection from the chosen creature type.

@@ -1,0 +1,8 @@
+Name:Monstrous Guise
+ManaCost:B
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | ValidTgtsDesc$ creature you control | NumAtt$ +1 | KW$ Menace | SubAbility$ Draw | SpellDescription$ Target creature you control gets +1/+0 and gains menace until end of turn. Draw a card.
+SVar:Draw:DB$ Draw
+
+Oracle:Target creature you control gets +1/+0 and gains indestructible until end of turn.\nDraw a card.

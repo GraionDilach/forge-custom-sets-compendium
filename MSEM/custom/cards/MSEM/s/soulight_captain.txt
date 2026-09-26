@@ -1,0 +1,12 @@
+Name:Soulight Captain
+ManaCost:3 W
+Types:Creature Spirit Soldier
+PT:2/2
+
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | CheckSVar$ X | Execute$ TrigPutCounter | TriggerDescription$ At the beginning of each end step, if you gained life this turn, put a +1/+1 counter on a creature you control.
+SVar:TrigPutCounter:DB$ PutCounter | Choices$ Creature.YouCtrl | CounterType$ P1P1 | CounterNum$ 1
+SVar:X:Count$LifeYouGainedThisTurn
+
+Oracle:At the beginning of each end step, if you gained life this turn, put a +1/+1 counter on a creature you control.
+
+DeckHints:Ability$LifeGain

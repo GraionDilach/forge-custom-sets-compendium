@@ -1,0 +1,15 @@
+Name:Life's Will
+ManaCost:4 W W W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ X | AddToughness$ X | Description$ Enchanted creature gets +X/+X, where X is your life total.
+SVar:X:Count$YourLifeTotal
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.AttachedBy | Execute$ TrigChange | TriggerDescription$ When enchanted creature dies, shuffle this card into its owner's library.
+SVar:TrigShuffle:DB$ ChangeZone | Destination$ Library | Shuffle$ True | Defined$ TriggeredNewCardLKICopy
+
+Oracle:Enchant creature\nEnchanted creature gets +X/+X, where X is your life total.\nWhen enchanted creature dies, shuffle this card into its owner's library.
+
+SVar:AttachAILogic:Pump

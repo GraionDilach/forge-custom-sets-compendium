@@ -1,0 +1,13 @@
+Name:Depths of Solitude
+ManaCost:1 U
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ -3 | Description$ Enchanted creature gets -3/-0.
+
+S:Mode$ RaiseCost | ValidTarget$ Creature.Enchantedby | Activator$ Player | Type$ Spell | Amount$ 1 | Description$ Spells that target enchanted creature cost {1} more to cast.
+
+Oracle:Enchant creature\nEnchanted creature gets -3/-0.\nSpells that target enchanted creature cost {1} more to cast.
+
+SVar:AttachAILogic:Curse

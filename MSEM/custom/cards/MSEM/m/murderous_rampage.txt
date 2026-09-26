@@ -1,0 +1,8 @@
+Name:Murderous Rampage
+ManaCost:3 B B
+Types:Sorcery
+
+A:SP$ Destroy | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | SubAbility$ DBSacrifice | SpellDescription$ Destroy target creature an opponent controls. Then its controller sacrifices a creature.
+SVar:DBSacrifice:DB$ Sacrifice | Defined$ TargetedController | SacValid$ Creature
+
+Oracle:Destroy target creature an opponent controls. Then its controller sacrifices a creature.

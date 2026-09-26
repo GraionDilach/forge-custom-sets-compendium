@@ -1,0 +1,11 @@
+Name:Daybreak Justicar
+ManaCost:4 W W
+Types:Creature Angel
+PT:4/3
+
+K:Flying
+
+T:Mode$ Blocks | ValidCard$ Creature.YouDontCtrl | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever a creature you don't control blocks, it gets -1/-0 until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredBlockerLKICopy | NumAtt$ -1
+
+Oracle:Flying\nWhenever a creature you don't control blocks, it gets -1/-0 until end of turn.

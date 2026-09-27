@@ -1,0 +1,10 @@
+Name:Forced Sprouting
+ManaCost:2 G G
+Types:Sorcery
+
+A:SP$ Destroy | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | SubAbility$ DBToken | SpellDescription$ Destroy target artifact or enchantment. Create a 1/1 green Saproling creature token.
+SVar:DBToken:DB$ Token | TokenScript$ g_1_1_saproling | TokenOwner$ You
+
+Oracle:Destroy target artifact or enchantment. Create a 1/1 green Saproling creature token.
+
+DeckHas:Ability$Token

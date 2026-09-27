@@ -1,0 +1,14 @@
+Name:Astral Dynamo
+ManaCost:4
+Types:Artifact
+
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ You | Execute$ TrigPutCounter | TriggerZones$ Battlefield | TriggerDescription$ When you cast a spell, put a charge counter on this artifact.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ CHARGE | CounterNum$ 1
+
+A:AB$ Pump | Cost$ T SubCounter<X/CHARGE> | AILogic$ ManaRitualBattery.1 | AINoRecursiveCheck$ True | SpellDescription$ Add {C} for each charge counter removed this way.
+SVar:DBMana:DB$ Mana | Produced$ C | Amount$ X
+SVar:X:Count$xPaid
+
+Oracle:When you cast a spell, put a charge counter on this artifact.\n{T}, Remove any number of charge counters from this artifact: Add {C} for each charge counter removed this way.
+
+DeckHas:Ability$Counters

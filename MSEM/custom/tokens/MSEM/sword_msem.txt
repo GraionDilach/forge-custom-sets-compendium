@@ -1,4 +1,4 @@
-Name:Sword
+Name:Sword Token
 ManaCost:no cost
 Types:Artifact Equipment
 

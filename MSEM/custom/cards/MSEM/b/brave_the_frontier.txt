@@ -1,0 +1,12 @@
+Name:Brave the Frontier
+ManaCost:1 G
+Types:Sorcery
+
+A:SP$ Effect | StaticAbilities$ Exploration | AILogic$ Always | SubAbility$ DBScry | SpellDescription$ You may play an additional land this turn. Scry 1.
+SVar:Exploration:Mode$ Continuous | Affected$ You | AdjustLandPlays$ 1 | Description$ You may play an additional land this turn.
+SVar:DBScry:DB$ Scry | ScryNum$ 1
+
+Oracle:You may play an additional land this turn.\nScry 1.
+
+SVar:NeedsToPlayVar:ZZ GE1
+SVar:ZZ:Count$ValidHand Land.YouOwn

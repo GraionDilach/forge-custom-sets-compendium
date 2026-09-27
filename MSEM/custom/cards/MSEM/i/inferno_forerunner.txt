@@ -1,0 +1,13 @@
+Name:Inferno Forerunner
+ManaCost:1 R
+Types:Creature Elemental
+PT:2/1
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigPump | TriggerDescription$ When this creature enters, you may have another target creature you control gain haste until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.YouCtrl+Other | TgtPrompt$ Select another target creature you control | KW$ Haste
+
+Oracle:Haste\nWhen this creature enters, you may have another target creature you control gain haste until end of turn.
+
+SVar:PlayMain1:TRUE

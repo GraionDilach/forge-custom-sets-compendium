@@ -1,0 +1,8 @@
+Name:Vengeant Souls
+ManaCost:2 R R
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever a creature you control dies, this enchantment deals 1 damage to any target.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 1
+
+Oracle:Whenever a creature you control dies, this enchantment deals 1 damage to any target.

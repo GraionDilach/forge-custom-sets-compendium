@@ -1,0 +1,7 @@
+Name:Convergent Might
+ManaCost:5 R R R
+Types:Sorcery
+
+A:SP$ CopyPermanent | Defined$ Valid Permanent.YouCtrl+nonLand | PumpKeywords$ Haste | AtEOT$ Exile | SpellDescription$ For each nonland permanent you control, create a token that's a copy of it. If it's a creature, it gains haste. Exile all tokens created this way at the beginning of the next end step.
+
+Oracle:For each nonland permanent you control, create a token that's a copy of it. If it's a creature, it gains haste. Exile all tokens created this way at the beginning of the next end step.

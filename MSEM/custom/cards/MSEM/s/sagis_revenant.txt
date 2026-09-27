@@ -1,0 +1,14 @@
+Name:Sagi's Revenant
+ManaCost:3 B B
+Types:Creature Horror
+PT:5/4
+
+K:Menace
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | Execute$ TrigDiscard | CombatDamage$ True | TriggerDescription$ Whenever this creature deals combat damage to a player, that player discards a card.
+SVar:TrigDiscard:DB$ Discard | Defined$ TriggeredTarget | NumCards$ 1 | Mode$ TgtChoose
+
+T:Mode$ Discarded | ValidCard$ Land.OppOwn | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever an opponent discards a land card, you may have target creature get -2/-2 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ -2 | NumDef$ -2 | IsCurse$ True
+
+Oracle:Menace\nWhenever this creature deals combat damage to a player, that player discards a card.\nWhenever an opponent discards a land card, you may have target creature get -2/-2 until end of turn.

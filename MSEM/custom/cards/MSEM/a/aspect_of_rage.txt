@@ -1,0 +1,11 @@
+Name:Aspect of Rage
+ManaCost:4 R R
+Types:Creature Incarnation
+PT:5/3
+
+K:Menace
+
+T:Mode$ DamageDone | ValidSource$ Creature.YouCtrl | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigDamage | OptionalDecider$ You | TriggerDescription$ Whenever a creature you control deals combat damage to a player, you may have this creature deal 1 damage to any target.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 1
+
+Oracle:Menace\nWhenever a creature you control deals combat damage to a player, you may have this creature deal 1 damage to any target.

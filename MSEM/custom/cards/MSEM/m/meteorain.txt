@@ -1,0 +1,7 @@
+Name:Meteorain
+ManaCost:4 R R
+Types:Sorcery
+
+A:SP$ DealDamage | ValidTgts$ Creature,Planeswalker | NumDmg$ 5 | TargetMin$ 0 | TargetMax$ 5 | DividedAsYouChoose$ 5 | SpellDescription$ This spell deals 5 damage divided as you choose among any number of target creatures or planeswalkers.
+
+Oracle:This spell deals 5 damage divided as you choose among any number of target creatures or planeswalkers.

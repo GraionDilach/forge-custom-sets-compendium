@@ -1,0 +1,9 @@
+Name:Envoy of Growth
+ManaCost:3 G
+Types:Creature Treefolk
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | TriggerDescription$ When this creature enters, search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | Tapped$ True | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land
+
+Oracle:When this creature enters, search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.

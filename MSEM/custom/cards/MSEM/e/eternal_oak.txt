@@ -1,0 +1,14 @@
+Name:Eternal Oak
+ManaCost:5 G G
+Types:Creature Treefolk
+PT:0/0
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each creature you control.
+SVar:X:Count$Valid Creature.YouCtrl
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl+!token | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever a nontoken creature you control dies, create a 1/1 green Saproling creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ g_1_1_saproling | TokenOwner$ You
+
+Oracle:This creature gets +1/+1 for each creature you control.\nWhenever a nontoken creature you control dies, create a 1/1 green Saproling creature token.
+
+DeckHas:Ability$Token

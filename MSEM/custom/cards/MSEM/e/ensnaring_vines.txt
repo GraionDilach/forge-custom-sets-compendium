@@ -1,0 +1,14 @@
+Name:Ensnaring Vines
+ManaCost:G
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddKeyword$ Reach | Description$ Enchanted creature has reach.
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddAbility$ Tap | Description$ Enchanted creature has "{G}, Sacrifice this enchantment: Tap target creature with flying."
+SVar:Tap:AB$ Tap | Cost$ G Sac<1/OriginalHost/Ensnaring Vines> | ValidTgts$ Creature.withFlying | TgtPrompt$ Select target creature with flying | SpellDescription$ Tap target creature with flying.
+
+Oracle:Enchant creature\nEnchanted creature has reach.\nEnchanted creature has "{G}, Sacrifice this enchantment: Tap target creature with flying."
+
+SVar:AttachAILogic:Pump

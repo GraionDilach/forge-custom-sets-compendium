@@ -1,0 +1,14 @@
+Name:Lifespinner Spider
+ManaCost:3 G
+Types:Creature Spider
+PT:2/4
+
+K:Reach
+
+T:Mode$ AttackerBlockedByCreature | ValidCard$ Creature.withFlying | ValidBlocker$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ Whenever this creature blocks or becomes blocked by a creature with flying, you gain 1 life.
+T:Mode$ AttackerBlockedByCreature | ValidCard$ Card.Self | ValidBlocker$ Creature.withFlying | Execute$ TrigGainLife | Secondary$ True | TriggerDescription$ Whenever this creature blocks or becomes blocked by a creature with flying, you gain 1 life.
+SVar:TrigGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 1
+
+Oracle:Reach\nWhenever this creature blocks or becomes blocked by a creature with flying, you gain 1 life.
+
+DeckHas:Ability$LifeGain

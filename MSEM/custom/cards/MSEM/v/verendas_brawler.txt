@@ -1,0 +1,10 @@
+Name:Verendas Brawler
+ManaCost:G G
+Types:Creature Elf Warrior
+PT:3/1
+
+A:AB$ Regenerate | Cost$ SubCounter<1/P1P1/Creature.YouCtrl/a creature you control> | SpellDescription$ Regenerate this creature.
+
+Oracle:Remove a +1/+1 counter from a creature you control: Regenerate this creature.
+
+DeckHints:Ability$Counters

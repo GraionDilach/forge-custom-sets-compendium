@@ -1,0 +1,18 @@
+Name:Mavisa's Familiar
+ManaCost:2 G
+Types:Creature Beast
+PT:3/3
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ Lifelink | IsPresent$ Creature.White+YouCtrl+Other | Description$ As long as you control another white creature, this creature has lifelink.
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ Flying | IsPresent$ Creature.Blue+YouCtrl+Other | Description$ As long as you control another blue creature, this creature has flying.
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ Deathtouch | IsPresent$ Creature.Black+YouCtrl+Other | Description$ As long as you control another black creature, this creature has deathtouch.
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ Trample | IsPresent$ Creature.Red+YouCtrl+Other | Description$ As long as you control another red creature, this creature has trample.
+
+Oracle:As long as you control another white creature, this creature has lifelink. The same is true for blue and flying, black and deathtouch, and read and trample.
+
+SVar:BuffedBy:Creature.White+Blue+Black+Red
+
+DeckHints:Color$White+Blue+Black+Red

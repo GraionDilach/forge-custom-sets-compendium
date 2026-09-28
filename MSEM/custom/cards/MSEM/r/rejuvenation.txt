@@ -1,0 +1,8 @@
+Name:Rejuvenation
+ManaCost:2 G G
+Types:Sorcery
+
+A:SP$ UntapAll | ValidCards$ Land.Basic+YouCtrl | SubAbility$ DBDraw | SpellDescription$ Untap all basic lands you control. Draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Untap all basic lands you control.\nDraw a card.

@@ -1,0 +1,9 @@
+Name:Crude Tablet
+ManaCost:3
+Types:Artifact
+
+A:AB$ Draw | Cost$ 2 T | SubAbility$ DBStayTapped | SpellDescription$ Draw a card. This artifact doesn't untap during your next untap step.
+SVar:DBStayTapped:DB$ Effect | ReplacementEffects$ DontUntap | RememberObjects$ Self | ExileOnMoved$ Battlefield | Duration$ UntilTheEndOfYourNextUntap
+SVar:DontUntap:Event$ Untap | ValidCard$ Card.IsRemembered | ValidStepTurnToController$ Player.Activator | Layer$ CantHappen | Description$ EFFECTSOURCE doesn't untap during its controller's next untap step.
+
+Oracle:{2}, {T}: Draw a card. This artifact doesn't untap during its controller's next untap step.

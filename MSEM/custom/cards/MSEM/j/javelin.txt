@@ -1,0 +1,13 @@
+Name:Javelin
+ManaCost:4
+Types:Artifact Equipment
+
+K:Equip:2
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 2 | AddAbility$ JavelinDamage | Description$ Equipped creature gets +2/+0 and has "{T}, Unattach this equipment: It deals 2 damage to target creature."
+
+SVar:JavelinDamage:AB$ DealDamage | Cost$ T Unattach<OriginalHost/Javelin> | NumDmg$ 2 | DamageSource$ OriginalHost | ValidTgts$ Creature | SpellDescription$ ORIGINALHOST deals 2 damage to target creature.
+
+Oracle:Equipped creature gets +2/+0 and has "{T}, Unattach this equipment: It deals 2 damage to target creature."\nEquip {2}
+
+SVar:NonStackingAttachEffect:True

@@ -1,0 +1,18 @@
+Name:Sunwright Scion
+ManaCost:3 G W
+Types:Creature Elf Druid
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounters | TriggerDescription$ When this creature enters, put a +1/+1 counter on each other creature you control.
+SVar:TrigPutCounters:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl+Other | CounterType$ P1P1 | CounterNum$ 1
+
+T:Mode$ Phase | Phase$ BeginCombat | TriggerZones$ Battlefield | Execute$ TrigChoose | OptionalDecider$ You | TriggerDescription$ At the beginning of each combat, you may have target creture with a +1/+1 counter on it gain your choice of vigilance or lifelink or trample until end of turn.
+SVar:TrigChoose:DB$ Pump | ValidTgts$ Creature.counters_GE1_P1P1 | TgtPrompt$ Select target creature with a +1/+1 counter | KWChoice$ Vigilance,Lifelink,Trample
+
+Oracle:When this creature enters, put a +1/+1 counter on each other creature you control.\nAt the beginning of each combat, you may have target creture with a +1/+1 counter on it gain your choice of vigilance or lifelink or trample until end of turn.
+
+SVar:PlayMain1:TRUE
+
+SVar:NeedsToPlay:Creature.YouCtrl
+
+DeckHas:Ability$Counters
